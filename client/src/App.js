@@ -16,6 +16,7 @@ useEffect(() => {
   return (
     <div className="App">
       <h1>Page Count: {count}</h1>
+      <h2>Adding Test</h2>
     </div>
   );
 }

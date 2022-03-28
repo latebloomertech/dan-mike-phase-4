@@ -1,6 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 
 
 function App() {
@@ -21,11 +22,21 @@ useEffect(() => {
 
 
   return (
-    <div className="App">
-      <h1>Page Count: {count}</h1>
-      <h2>Adding Test</h2>
-      <p>{recipes}</p>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Switch>
+          <Route path="/testing">
+            <h1>Test Route</h1>
+          </Route>
+          <Route path="/">
+            <h1>Page Count: {count}</h1>
+            <h2>Adding Test</h2>
+            <p>{recipes}</p>
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
+
   );
 }
 

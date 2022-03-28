@@ -1,6 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from "react";
+import Ingredients from "./Ingredients";
+import Main from "./Main";
+import NavBar from "./NavBar";
+import RecipeField from "./RecipeField"
+
+
 
 
 function App() {

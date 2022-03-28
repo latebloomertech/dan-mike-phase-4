@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from "react";
-import Ingredients from "./Ingredients";
-import Main from "./Main";
-import NavBar from "./NavBar";
-import RecipeField from "./RecipeField"
+import Ingredients from "./components/Ingredients";
+import Main from "./components/Main";
+import NavBar from "./components/NavBar";
+import RecipeField from "./components/RecipeField"
 
 
 

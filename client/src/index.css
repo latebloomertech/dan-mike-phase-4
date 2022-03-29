@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: white;
   background-size: 100vw;
 }
 
@@ -29,13 +29,13 @@ code {
 }
 
 .ingredient-prompt {
-  color: white;
+  color: black;
   text-align: left;
   justify-content: left;
 }
 
 .ingredients {
-  color: white;
+  color: black;
   text-align: left;
   justify-content: left;
 }
@@ -43,4 +43,14 @@ code {
 .ingredient-container {
 display: flex;
 flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 40%;
+  box-shadow: 0 3px 7px -1px 
 }

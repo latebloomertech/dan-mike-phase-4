@@ -14,8 +14,7 @@ function handleIngredientClick() {
     <div className="Main">
         <h1 className="main-title">Let's Get Baking!</h1>
         <h2 className="main-subtitle">Recipes inspired by your pantry</h2>
-       {/*  <Ingredients ingredients={ingredients} handleIngredientClick={handleIngredientClick}/> */}
-        <RecipeField recipes={recipes}/>
+        <Ingredients ingredients={ingredients} handleIngredientClick={handleIngredientClick}/>
     </div>
   )
 }

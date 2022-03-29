@@ -4,7 +4,8 @@ import Main from "./components/Main";
 
 function App() {
   const [recipes, setRecipes] = useState([])
-  const [ingredients, setIngredients] = useState([])
+  const [ingredients, setIngredients] =useState([])
+
 
 useEffect(async () => {
   const response = await fetch("/ingredients")

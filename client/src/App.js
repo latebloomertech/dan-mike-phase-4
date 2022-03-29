@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
 import Main from "./components/Main";
 
 function App() {
   const [recipes, setRecipes] = useState([])
   const [ingredients, setIngredients] =useState([])
+
 
 useEffect(async () => {
   const response = await fetch("/ingredients")
@@ -32,5 +32,4 @@ useEffect(async () => {
     </BrowserRouter>
   );
 }
-
 export default App;

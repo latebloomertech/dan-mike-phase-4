@@ -1,8 +1,9 @@
 import React from 'react';
 import Ingredients from "./Ingredients"
+import RecipeField from "./RecipeField"
 
 
-function Main({ ingredients }) {
+function Main({ ingredients, recipes }) {
 
 
 function handleIngredientClick() {

@@ -37,15 +37,7 @@
   }
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 1rem;
-  margin: 1rem auto;
-  width: 40%;
-  box-shadow: 0 3px 7px -1px 
-}
+
 
 .instructions-link {
   display: flex;

@@ -1,26 +1,20 @@
-import './App.css';
 import { useState, useEffect } from "react";
-
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
-
+import Main from "./components/Main";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [recipes, setRecipes] = useState()
+  const [recipes, setRecipes] = useState([])
+  const [ingredients, setIngredients] = useState([])
 
-useEffect(() => {
-  fetch("/hello")
-    .then((r) => r.json())
-    .then((data) => setCount(data.count));
+useEffect(async () => {
+  const response = await fetch("/ingredients")
+  const data = await response.json()
+  setIngredients(data)
+
+  const recipeResponse = await fetch("/recipes")
+  const recipeData = await recipeResponse.json()
+  setRecipes(recipeData)
 }, []);
-
-useEffect(() => {
-  fetch("/recipes")
-    .then((r) => r.json())
-    .then((d) => setRecipes(d.recipes));
-}, []);
-
 
   return (
     <BrowserRouter>
@@ -30,15 +24,11 @@ useEffect(() => {
             <h1>Test Route</h1>
           </Route>
           <Route path="/">
-            <h1>Page Count: {count}</h1>
-            <h2>Adding Test</h2>
-            <p>{recipes}</p>
+            <Main ingredients={ingredients} recipes={recipes}/>
           </Route>
         </Switch>
       </div>
     </BrowserRouter>
-
   );
 }
-
 export default App;

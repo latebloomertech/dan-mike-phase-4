@@ -1,21 +1,32 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Ingredients from "./Ingredients"
 import RecipeField from "./RecipeField"
 
 
 function Main({ ingredients, recipes }) {
+const [showList, setShowList] = useState([])
+const [showAll, setShowAll] = useState([])
+
+function handleShowAll(e) {
+  setShowAll([recipes])
+}
+
+function handleIngredientClick(e) {
+  console.log(e.target.value)
 
 
-function handleIngredientClick() {
+ fetch(`/ingredients/${e.target.value}`)
+ .then((res) =>res.json())
+ .then((data) => setShowList(data))
 
 }
 
+// console.log(showList)
+
     return (
     <div className="Main">
-        <h1 className="main-title">Let's Get Baking!</h1>
-        <h2 className="main-subtitle">Recipes inspired by your pantry</h2>
-        <Ingredients ingredients={ingredients} handleIngredientClick={handleIngredientClick}/>
-        <RecipeField recipes={recipes} />
+        <Ingredients ingredients={ingredients} handleIngredientClick={handleIngredientClick} handleShowAll={handleShowAll}/>
+        <RecipeField recipes={recipes} showList={showList} showAll={showAll}/>
     </div>
   )
 }

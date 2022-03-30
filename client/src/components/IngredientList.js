@@ -1,23 +1,16 @@
 import React, {useState} from 'react'
 
 function IngredientList({ingredient, handleIngredientClick}) {
-  const [checked, setChecked] = useState(true)
-
-function handleChange() {
-  setChecked(!checked)
-}
 
   return (
-
-    <label className='ingredients'>
-      <input
-        type="checkbox"
-        className="ingredients"
-        checked={checked}
-        onChange={handleChange}/>
-        {ingredient.name}
-    </label>
-
+    <div>
+      <input onClick={handleIngredientClick}
+        type="radio"
+        id="testID"
+        name="testName"
+        value={ingredient.id} />
+        <label>{ingredient.name}</label>
+    </div>
   )
 }
 

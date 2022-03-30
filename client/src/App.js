@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Main from "./components/Main";
+import Header from "./components/Header";
 
 function App() {
   const [recipes, setRecipes] = useState([])
@@ -20,6 +21,7 @@ useEffect(async () => {
   return (
     <BrowserRouter>
       <div className="App">
+        <Header />
         <Switch>
           <Route path="/testing">
             <h1>Test Route</h1>

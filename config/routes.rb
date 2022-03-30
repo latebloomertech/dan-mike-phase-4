@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   
 
-'
+
 get '/detail', to: 'ingredients#detail'
 
 get '*path',

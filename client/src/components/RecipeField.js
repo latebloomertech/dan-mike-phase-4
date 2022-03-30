@@ -1,9 +1,8 @@
 import React from "react";
 import RecipeCard from "./RecipeCard";
 
-function RecipeField({recipes, showList}) {
-    console.log(showList)
-  
+function RecipeField({recipes, showList, showRecipeClick}) {
+
     return (
 
       <div id = "recipe-field">
@@ -13,6 +12,7 @@ function RecipeField({recipes, showList}) {
             <RecipeCard className="recipecards"
             key={recipe.id}
             recipe={recipe}
+            showRecipeClick={showRecipeClick}
             />
         ))}
 

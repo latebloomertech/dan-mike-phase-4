@@ -1,15 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts "Destroying old seeds"
+
 Ingredient.destroy_all
 RecipeIngredient.destroy_all
 Recipe.destroy_all
+User.destroy_all
 
-puts "seeding data"
+puts "All old seeds destroyed"
+puts "Seeding data"
 
 i1 =  Ingredient.create(name: "Flour")
 i2 =  Ingredient.create(name: "Yeast")
@@ -286,6 +283,6 @@ ri79 = RecipeIngredient.create(recipe_id: r6.id, ingredient_id: i18.id)
 ri80 = RecipeIngredient.create(recipe_id: r6.id, ingredient_id: i19.id)
 ri81 = RecipeIngredient.create(recipe_id: r6.id, ingredient_id: i36.id)
 
+u1 = 
 
-
-puts "finished seeding"
+puts "Finished seeding"

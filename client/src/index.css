@@ -14,6 +14,35 @@ code {
     monospace;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #fce594;
+  max-height: 30rem;
+}
+.navbar{
+  display: flex;
+ 
+  padding-bottom: .5rem;
+  padding-left: .5rem;
+}
+
+#logo {
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  padding-top: 1rem;
+  height: 15rem;
+  width:25rem ;
+}
+
+
+.navlink{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .main {
   justify-content: center;
 }
@@ -42,8 +71,16 @@ code {
 
 .ingredient-container {
 display: flex;
+float: left;
 flex-direction: column;
 }
+
+.recipe-field {
+  display: flex;
+  float: right;
+  flex-direction: column;
+  justify-content: right;
+  }
 
 .card {
   display: flex;

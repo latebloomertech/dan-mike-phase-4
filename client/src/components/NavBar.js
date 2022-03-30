@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { NavLink } from "react-router-dom";
+
 
 function NavBar() {
   return (
@@ -11,8 +12,5 @@ function NavBar() {
                 {/* <NavLink className="navlink" to="/recipepage">testRecipeDetail</NavLink> */}
             </nav>
 
-    </div>
-  )
-}
 
 export default NavBar

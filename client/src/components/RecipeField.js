@@ -6,7 +6,6 @@ function RecipeField({recipes, showList, showRecipeClick}) {
     return (
 
       <div id = "recipe-field">
-
       <ul className="cards">
       {recipes = showList.map((recipe) =>(
             <RecipeCard className="recipecards"
@@ -15,7 +14,6 @@ function RecipeField({recipes, showList, showRecipeClick}) {
             showRecipeClick={showRecipeClick}
             />
         ))}
-
       </ul>
       </div>
 

@@ -30,7 +30,7 @@ function showRecipeClick(e) {
   })
 
 }
-console.log(recipeDetail)
+
 
 return (
     <BrowserRouter>

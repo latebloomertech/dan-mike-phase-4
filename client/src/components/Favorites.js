@@ -1,4 +1,5 @@
 import React from 'react'
+import RecipeCard from "./RecipeCard";
 
 function Favorites() {
   return (

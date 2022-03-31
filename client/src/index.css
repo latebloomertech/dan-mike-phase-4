@@ -27,6 +27,11 @@ code {
   padding-left: .5rem;
 }
 
+#favButton {
+  display: flex;
+  flex-direction: flex-end;
+}
+
 #logo {
   display: flex;
   position: relative;

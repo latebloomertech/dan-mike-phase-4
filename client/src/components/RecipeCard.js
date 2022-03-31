@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
-
+import FavoriteButton from "./FavoriteButton";
 function RecipeCard ({recipe, showRecipeClick}) {
 
 
@@ -17,6 +17,7 @@ return (
         value={recipe.id}>Baking Instructions
         </button>
         </Link>
+        <FavoriteButton />
     </div>
 );
 }

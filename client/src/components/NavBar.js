@@ -13,13 +13,14 @@ function NavBar( {user, setUser }) {
 
   return (
     <div>
+      <button onClick={handleLogoutClick}>
+            Logout
+          </button>
         <nav className="navbar">
                 <NavLink className="navlink" to="/">Home</NavLink>
                 <NavLink className="navlink" to="/favorites">My Recipes</NavLink>
          </nav>
-         <button onClick={handleLogoutClick}>
-            Logout
-          </button>
+
     </div>
   )
 }

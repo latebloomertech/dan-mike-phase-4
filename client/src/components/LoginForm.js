@@ -14,10 +14,9 @@ function LoginForm({ onLogin }) {
       },
       body: JSON.stringify({ username, password }),
     })
-    .then((r) => r.json())
-    .then((user) => onLogin(user));
-    };
-
+      .then((r) => r.json())
+      .then((user) => onLogin(user));
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -36,6 +35,7 @@ function LoginForm({ onLogin }) {
           autoComplete="current-password"
           value={password}
           onChange={(e) => setPassword(e.target.value)} />
+          <button type="submit">Login</button>
     </form>
   );
 }

@@ -23,7 +23,7 @@ function FavButton ({onFavorite, user_recipe}) {
     <form onSubmit={handleSubmit}>
 
       <label htmlFor="Favorite Recipe"> </label>
-      <button type="submit" id="favButton" value={favorite} onChange={(e) => setFavorite(e.target.value)}>Favorite</button>
+      <button type="submit" className="favButton" value={favorite} onChange={(e) => setFavorite(e.target.value)}>Favorite</button>
     </form>
   );
 }

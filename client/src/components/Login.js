@@ -1,5 +1,6 @@
 import { useState } from "react";
-import LoginForm from "../components/LoginForm";
+import LoginForm from "./LoginForm";
+import SignUpForm from "./SignUpForm";
 
 
 function Login({ onLogin }) {
@@ -7,12 +8,27 @@ function Login({ onLogin }) {
 
   return (
     <div>
+      {showLogin ? (
+        <>
           <LoginForm onLogin={onLogin} />
           <p>
+            Don't have an account? &nbsp;
+            <button onClick={() => setShowLogin(false)}>
+              Sign Up
+            </button>
+          </p>
+          </>
+      ) : (
+        <>
+        <SignUpForm onLogin={onLogin} />
+        <p>
+            Already have an account? &nbsp;
             <button color="secondary" onClick={() => setShowLogin(true)}>
               Log In
             </button>
           </p>
+        </>
+      )}
     </div>
   );
 }

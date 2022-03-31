@@ -12,6 +12,8 @@ function App() {
   const [ingredients, setIngredients] = useState([])
   const [recipeDetail, setRecipeDetail] = useState([])
   const [user, setUser] = useState(null)
+  const [showList, setShowList] = useState([])
+
 
 useEffect(async () => {
   fetch("/me")
@@ -26,6 +28,7 @@ useEffect(async () => {
   const recipeResponse = await fetch("/recipes")
   const recipeData = await recipeResponse.json()
   setRecipes(recipeData)
+  setShowList(recipeData)
 
 }, []);
 
@@ -52,7 +55,7 @@ return (
             <h1>Test Route</h1>
           </Route>
           <Route exact path="/">
-            <Main ingredients={ingredients} recipes={recipes} showRecipeClick={showRecipeClick}/>
+            <Main ingredients={ingredients} recipes={recipes} showRecipeClick={showRecipeClick} showList={showList} setShowList={setShowList}/>
           </Route>
           <Route exact path="/favorites">
            <Favorites user={user} />

@@ -29,23 +29,6 @@ useEffect(async () => {
 
 }, []);
 
-// if (!user) return <Login onLogin={setUser} />
-
-
-// useEffect(async () => {
-
-//   const response = await fetch("/ingredients")
-//   const data = await response.json()
-//   setIngredients(data)
-
-//   const recipeResponse = await fetch("/recipes")
-//   const recipeData = await recipeResponse.json()
-//   setRecipes(recipeData)
-// }, []);
-
-// if (!user) return <Login onLogin={setUser} />
-
-
 function showRecipeClick(e) {
  console.log(e)
   fetch(`/recipes/${e}`)

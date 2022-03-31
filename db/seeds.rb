@@ -3,7 +3,7 @@ puts "Destroying old seeds"
 Ingredient.destroy_all
 RecipeIngredient.destroy_all
 Recipe.destroy_all
-User.destroy_all
+
 
 puts "All old seeds destroyed"
 puts "Seeding data"
@@ -61,7 +61,7 @@ r1 = Recipe.create(name: "Dirt Bomb Muffin", description: "A cinnamon sugar coat
     bake until golden and a toothpick inserted into donut comes out clean, 15-20 minutes. Invert donuts onto a baking sheet with a wire rack; let cool completely.
 
     Melt remaining butter in a bowl; in another bowl mix remaining sugar and the cinnamon. Working one at a time, dip entire donut in butter and roll in the cinnamon sugar. Repeat dipping and rolling; return to wire rack until crust is set.
-    ")
+    ", image: "/images/DirtBombs.jpg")
 
 r2 = Recipe.create(name: "Italian Pistachios Cookies", description: "A simple sweet and savory cookie", instructions: "For this recipe, you can use either a food processor, stand mixer, or by hand. In the bowl whisk together the flour, sugar, baking powder, cinnamon, cardamom, chopped pistachios (remove 1 tablespoon to sprinkle on the unbaked cookies set aside) and the salt, then add the butter and egg, pulse, beat with the flat beater or mix with a fork until combined.
 
@@ -283,6 +283,6 @@ ri79 = RecipeIngredient.create(recipe_id: r6.id, ingredient_id: i18.id)
 ri80 = RecipeIngredient.create(recipe_id: r6.id, ingredient_id: i19.id)
 ri81 = RecipeIngredient.create(recipe_id: r6.id, ingredient_id: i36.id)
 
-u1 = 
+
 
 puts "Finished seeding"

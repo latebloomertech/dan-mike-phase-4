@@ -5,8 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fce594;;
+  background-color: #fce594;
   background-size: 100vw;
+  margin: 1rem;
 }
 
 code {
@@ -29,6 +30,11 @@ code {
   margin-left: 1em;
   font-size: 20px;
   line-height: 1.5;
+}
+
+#favButton {
+  display: flex;
+  flex-direction: flex-end;
 }
 
 #logo {
@@ -97,11 +103,22 @@ letter-spacing: .2px;
   align-content: flex-end;
 }
 
+#instructions-p {
+  display: flex;
+  margin: 1rem;
+  
+}
+
 .recipe-field {
   display: flex;
   float: right;
   flex-direction: column;
   justify-content: right;
+  }
+
+  .recpie-page{
+    display: flex;
+    padding-right: 1rem;
   }
 
 .card {

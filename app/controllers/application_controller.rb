@@ -3,6 +3,7 @@ class ApplicationController < ActionController::API
     rescue_from ActiveRecord::RecordNotFound, with: :record_not_found_message
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
+
 private
 
 def record_not_found_message(error)

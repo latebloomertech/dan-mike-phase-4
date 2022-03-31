@@ -16,10 +16,12 @@ function App() {
 
 
 useEffect(async () => {
-  fetch("/me")
-  .then((r) => r.json())
-  .then((user) => setUser(user))
 
+  fetch("/me").then((r) => {
+    if (r.ok) {
+      r.json().then((user) => setUser(user));
+    }
+  });
 
   const response = await fetch("/ingredients")
   const data = await response.json()
@@ -32,23 +34,19 @@ useEffect(async () => {
 
 }, []);
 
+
 function showRecipeClick(e) {
  console.log(e)
   fetch(`/recipes/${e}`)
  .then((res) =>res.json())
- .then((data) => {
-  setRecipeDetail(data)
-  })
-
+ .then((data) => setRecipeDetail(data))
 }
-
 
 return (
     <BrowserRouter>
       <div className="App">
       <Login onLogin={setUser} />
        <NavBar user={user} setUser={setUser} />
-
         <Header />
         <Switch>
           <Route exact path="/testing">

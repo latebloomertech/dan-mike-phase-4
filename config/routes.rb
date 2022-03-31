@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
+  resources :user_recipes
+  resources :users
   resources :recipe_ingredients
   resources :ingredients
   resources :recipes, only: [:index, :show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  post "/login", to: "sessions#create"
+  post "/signup", to: "users#create"
   get "/me", to: "users#show"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
-  
+  # get "/auth", to: "users#show"
 
 
 get '/detail', to: 'ingredients#detail'

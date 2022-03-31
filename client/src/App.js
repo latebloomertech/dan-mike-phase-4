@@ -4,14 +4,21 @@ import Main from "./components/Main";
 import Header from "./components/Header";
 import Favorites from "./components/Favorites";
 import RecipePage from "./components/RecipePage";
+import Login from "./components/Login";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [recipes, setRecipes] = useState([])
   const [ingredients, setIngredients] = useState([])
   const [recipeDetail, setRecipeDetail] = useState([])
-
+  const [user, setUser] = useState(null)
 
 useEffect(async () => {
+  fetch("/me")
+  .then((r) => r.json())
+  .then((user) => setUser(user))
+
+
   const response = await fetch("/ingredients")
   const data = await response.json()
   setIngredients(data)
@@ -19,7 +26,25 @@ useEffect(async () => {
   const recipeResponse = await fetch("/recipes")
   const recipeData = await recipeResponse.json()
   setRecipes(recipeData)
+
 }, []);
+
+// if (!user) return <Login onLogin={setUser} />
+
+
+// useEffect(async () => {
+
+//   const response = await fetch("/ingredients")
+//   const data = await response.json()
+//   setIngredients(data)
+
+//   const recipeResponse = await fetch("/recipes")
+//   const recipeData = await recipeResponse.json()
+//   setRecipes(recipeData)
+// }, []);
+
+// if (!user) return <Login onLogin={setUser} />
+
 
 function showRecipeClick(e) {
  console.log(e)
@@ -35,6 +60,9 @@ function showRecipeClick(e) {
 return (
     <BrowserRouter>
       <div className="App">
+      <Login onLogin={setUser} />
+       <NavBar user={user} setUser={setUser} />
+
         <Header />
         <Switch>
           <Route exact path="/testing">
@@ -44,7 +72,7 @@ return (
             <Main ingredients={ingredients} recipes={recipes} showRecipeClick={showRecipeClick}/>
           </Route>
           <Route exact path="/favorites">
-           <Favorites />
+           <Favorites user={user} />
           </Route>
           <Route path="/recipepage">
            <RecipePage recipeDetail={recipeDetail}/>

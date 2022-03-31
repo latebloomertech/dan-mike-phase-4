@@ -25,6 +25,10 @@ code {
   flex-direction: column;
   padding-bottom: .5rem;
   padding-left: .5rem;
+  margin-top: 1.5em;
+  margin-left: 1em;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 #logo {
@@ -80,9 +84,12 @@ display: flex;
 float: left;
 flex-direction: column;
 background-color: white;
-margin: 1rem;
+margin-left: 6em;
 padding: 1rem;
-box-shadow: 0 3px 7px -1px
+box-shadow: 0 3px 7px -1px;
+line-height: 1.25;
+font-size: 1.08em;
+letter-spacing: .2px;
 }
 
 .instructions-link {
@@ -106,5 +113,14 @@ box-shadow: 0 3px 7px -1px
   padding: 1rem;
   margin: 1rem auto;
   width: 40%;
-  box-shadow: 0 3px 7px -1px 
+  box-shadow: 0 3px 7px -1px
+}
+
+.recipe-title {
+  text-align: center;
+}
+
+.login-form {
+  margin-top: 2em;
+  margin-left: 3em;
 }

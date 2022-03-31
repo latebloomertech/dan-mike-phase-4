@@ -3,8 +3,8 @@ import Ingredients from "./Ingredients"
 import RecipeField from "./RecipeField"
 
 
-function Main({ ingredients, recipes, showRecipeClick }) {
-const [showList, setShowList] = useState([])
+function Main({ ingredients, recipes, showRecipeClick, showList, setShowList }) {
+// const [showList, setShowList] = useState([])
 const [showAll, setShowAll] = useState([])
 
 function handleShowAll() {

@@ -2,16 +2,26 @@ import React from 'react'
 import { NavLink } from "react-router-dom";
 
 
-function NavBar() {
+function NavBar( {user, setUser }) {
+  function handleLogoutClick() {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+      }
+    });
+  }
+
   return (
     <div>
         <nav className="navbar">
                 <NavLink className="navlink" to="/">Home</NavLink>
                 <NavLink className="navlink" to="/favorites">My Recipes</NavLink>
-                {/* <NavLink className="navlink" to="/recipepage">testRecipeDetail</NavLink> */}
-            </nav>
+         </nav>
+         <button onClick={handleLogoutClick}>
+            Logout
+          </button>
     </div>
   )
 }
 
-export default NavBar
+export default NavBar;

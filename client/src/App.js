@@ -20,7 +20,7 @@ useEffect(async () => {
   const recipeData = await recipeResponse.json()
   setRecipes(recipeData)
 }, []);
-
+console.log(recipes)
 function showRecipeClick(e) {
  console.log(e)
   fetch(`/recipes/${e}`)

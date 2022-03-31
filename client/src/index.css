@@ -5,8 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fce594;;
+  background-color: #fce594;
   background-size: 100vw;
+  margin: 1rem;
 }
 
 code {
@@ -95,11 +96,22 @@ box-shadow: 0 3px 7px -1px
   align-content: flex-end;
 }
 
+#instructions-p {
+  display: flex;
+  margin: 1rem;
+  
+}
+
 .recipe-field {
   display: flex;
   float: right;
   flex-direction: column;
   justify-content: right;
+  }
+
+  .recpie-page{
+    display: flex;
+    padding-right: 1rem;
   }
 
 .card {

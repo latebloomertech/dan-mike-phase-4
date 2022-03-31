@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
+  background-color: #fce594;;
   background-size: 100vw;
 }
 
@@ -16,19 +16,21 @@ code {
 
 .header {
   display: flex;
-  flex-direction: column;
+
   background-color: #fce594;
   max-height: 30rem;
 }
 .navbar{
   display: flex;
- 
+  flex-direction: column;
   padding-bottom: .5rem;
   padding-left: .5rem;
 }
 
 #logo {
+  display: flex;
   position: relative;
+  flex-direction: column;
   margin: auto;
   justify-content: center;
   padding-top: 1rem;
@@ -42,9 +44,13 @@ code {
   flex-direction: row;
   flex-wrap: wrap;
 }
-
+#login {
+  display: flex;
+  justify-content: en;
+}
 .main {
   justify-content: center;
+  background-color: #fce594;
 }
 
 .main-title {
@@ -73,6 +79,15 @@ code {
 display: flex;
 float: left;
 flex-direction: column;
+background-color: white;
+margin: 1rem;
+padding: 1rem;
+box-shadow: 0 3px 7px -1px
+}
+
+.instructions-link {
+  display: flex;
+  align-content: flex-end;
 }
 
 .recipe-field {
@@ -86,6 +101,8 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  color: white;
+  background-color: #6b94dd;
   padding: 1rem;
   margin: 1rem auto;
   width: 40%;

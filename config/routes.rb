@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :users
   resources :recipe_ingredients
   resources :ingredients
   resources :recipes, only: [:index, :show]
@@ -7,6 +6,7 @@ Rails.application.routes.draw do
 
   post "/login", to: "sessions#create"
   get "/me", to: "users#show"
+  post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   
 

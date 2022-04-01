@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import Login from "./Login";
 
 
 function NavBar( {user, setUser }) {
@@ -13,14 +14,18 @@ function NavBar( {user, setUser }) {
 
   return (
     <div>
-      <button onClick={handleLogoutClick}>
-            Logout
-          </button>
-        <nav className="navbar">
-                <NavLink className="navlink" to="/">Home</NavLink>
-                <NavLink className="navlink" to="/favorites">My Recipes</NavLink>
-         </nav>
+      {user ?
+        (<div>
+          <p>Welcome, {user.username}</p>
+          <button onClick={handleLogoutClick}>Logout</button>
+        </div>)
+        : (<Login onLogin={setUser} />)
+      }
 
+      <nav className="navbar">
+        <NavLink className="navlink" to="/">Home</NavLink>
+        <NavLink className="navlink" to="/favorites">My Recipes</NavLink>
+      </nav>
     </div>
   )
 }

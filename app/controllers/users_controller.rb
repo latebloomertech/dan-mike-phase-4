@@ -20,7 +20,7 @@ def show
 private
 
 def user_params
-    params.permit(:username)
+    params.permit(:username, :password)
 end
 
 end

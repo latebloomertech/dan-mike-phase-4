@@ -1,12 +1,11 @@
 import React from 'react'
 import FavButton from './FavoriteButton'
 function RecipePage({ recipeDetail }) {
-    
+
   return (
     <div className='recipe-page'>
         <h1>{recipeDetail.name}</h1>
          <img id="rPage-image" src={recipeDetail.image}/>
-        <FavButton />
         <h2>Description</h2>
         <p>{recipeDetail.description}</p>
         <h2>Instructions</h2>

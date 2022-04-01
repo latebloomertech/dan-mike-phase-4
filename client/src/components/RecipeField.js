@@ -1,7 +1,7 @@
 import React from "react";
 import RecipeCard from "./RecipeCard";
 
-function RecipeField({recipes, showList, showRecipeClick}) {
+function RecipeField({recipes, showList, showRecipeClick, user }) {
 
     return (
 
@@ -13,7 +13,7 @@ function RecipeField({recipes, showList, showRecipeClick}) {
             key={recipe.id}
             recipe={recipe}
             showRecipeClick={showRecipeClick}
-            />
+            user={user}/>
         ))}
       </ul>
       </div>

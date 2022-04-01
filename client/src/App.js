@@ -4,7 +4,6 @@ import Main from "./components/Main";
 import Header from "./components/Header";
 import Favorites from "./components/Favorites";
 import RecipePage from "./components/RecipePage";
-import Login from "./components/Login";
 import NavBar from "./components/NavBar";
 
 function App() {
@@ -45,23 +44,22 @@ function showRecipeClick(e) {
 return (
     <BrowserRouter>
       <div className="App">
-      <Login onLogin={setUser} />
-       <NavBar user={user} setUser={setUser} />
-        <Header />
-        <Switch>
-          <Route exact path="/testing">
-            <h1>Test Route</h1>
-          </Route>
-          <Route exact path="/">
-            <Main ingredients={ingredients} recipes={recipes} showRecipeClick={showRecipeClick} showList={showList} setShowList={setShowList}/>
-          </Route>
-          <Route exact path="/favorites">
-           <Favorites user={user} />
-          </Route>
-          <Route path="/recipepage">
-           <RecipePage recipeDetail={recipeDetail}/>
-          </Route>
-        </Switch>
+      <NavBar user={user} setUser={setUser} />
+      <Header />
+      <Switch>
+        <Route exact path="/testing">
+          <h1>Test Route</h1>
+        </Route>
+        <Route exact path="/">
+          <Main user={user} ingredients={ingredients} recipes={recipes} showRecipeClick={showRecipeClick} showList={showList} setShowList={setShowList}/>
+        </Route>
+        <Route exact path="/favorites">
+          <Favorites user={user} />
+        </Route>
+        <Route path="/recipepage">
+          <RecipePage recipeDetail={recipeDetail}/>
+        </Route>
+      </Switch>
       </div>
     </BrowserRouter>
   );

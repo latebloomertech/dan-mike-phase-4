@@ -1,32 +1,38 @@
-import {useState} from "react";
+// import {useState} from "react";
+// import {Link} from "react-router-dom"
 
 
-function FavButton ({onFavorite, user_recipe}) {
- const [favorite, setFavorite] = useState("");
+// function FavButton ({onFavorite, user_recipe}) {
 
- function handleSubmit(e) {
-    e.preventDefault();
-    fetch("/user_recipes", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ user_recipe }),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((user) => onFavorite(user));
-      }
-    });
-  }
 
-  return (
-    <form onSubmit={handleSubmit}>
+//  function handleSubmit(e) {
+//   console.log(e.target.value)
+//   e.preventDefault();
+//     fetch("/user_recipes", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({ user_recipe }),
+//     }).then((r) => {
+//       if (r.ok) {
+//         r.json().then((user) => setFavorite(user));
+//       }
+//     });
+//   }
 
-      <label htmlFor="Favorite Recipe"> </label>
-      <button type="submit" className="favButton" value={favorite} onChange={(e) => setFavorite(e.target.value)}>Favorite</button>
-    </form>
-  );
-}
+//   return (
+//       <Link to={`/favorites`}>
+//       <button
+//       className="favButton"
+//        onClick={(e) => handleSubmit(e.target.value)}
+//        value={recipe.id}>Favorite
+//       </button>
+//       </Link>
 
-export default FavButton;
+//   );
+// }
+
+// export default FavButton;
+
 

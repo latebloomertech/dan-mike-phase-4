@@ -17,19 +17,29 @@ code {
 
 .header {
   display: flex;
-
   background-color: #fce594;
-  max-height: 30rem;
+  max-height: 25rem;
+  margin-bottom: 3em;
 }
 .navbar{
   display: flex;
   flex-direction: column;
   padding-bottom: .5rem;
   padding-left: .5rem;
-  margin-top: 1.5em;
+  margin-top: 1em;
   margin-left: 1em;
   font-size: 20px;
   line-height: 1.5;
+  font-family: Abril-Flatface, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  line-height: 23px;
+}
+
+.cropped {
+  width: 30em;
+  height: 8em;
+  object-fit: cover;
 }
 
 #favButton {
@@ -43,9 +53,9 @@ code {
   flex-direction: column;
   margin: auto;
   justify-content: center;
-  padding-top: 1rem;
+  /* padding-top: 1rem;
   height: 15rem;
-  width:25rem ;
+  width:25rem ; */
 }
 
 
@@ -106,7 +116,7 @@ letter-spacing: .2px;
 #instructions-p {
   display: flex;
   margin: 1rem;
-  
+
 }
 
 .recipe-field {
@@ -141,3 +151,32 @@ letter-spacing: .2px;
   margin-top: 2em;
   margin-left: 3em;
 }
+
+.button-test {
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  font-family: Abril-Flatface, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: .95rem;
+  font-weight: bold;
+  line-height: 23px;
+  outline: none;
+  padding: .3rem;
+  background-color:#6b94dd;
+  color: white
+}
+
+.login-labels {
+  font-family: Abril-Flatface, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: .95rem;
+  font-weight: bold;
+  line-height: 23px;
+}
+
+.input-form {
+  margin-right: 1em;
+  margin-bottom: 1em;
+  padding: .5em;
+}
+

@@ -7,13 +7,13 @@ function Login({ onLogin, user }) {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
-    <div>
+    <div className="form-container">
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />
-          <p>
+          <p className="login-labels">
             Don't have an account? &nbsp;
-            <button onClick={() => setShowLogin(false)}>
+            <button className="button-test" onClick={() => setShowLogin(false)}>
               Sign Up
             </button>
           </p>
@@ -21,9 +21,9 @@ function Login({ onLogin, user }) {
       ) : (
         <>
         <SignUpForm onLogin={onLogin} />
-        <p>
+        <p className="login-labels">
             Already have an account? &nbsp;
-            <button color="secondary" onClick={() => setShowLogin(true)}>
+            <button color="secondary" className="button-test" onClick={() => setShowLogin(true)}>
               Log In
             </button>
           </p>

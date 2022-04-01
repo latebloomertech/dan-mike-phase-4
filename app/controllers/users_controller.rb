@@ -15,7 +15,16 @@ def show
     else
       render json: { error: "Not authorized" }, status: :unauthorized
     end
+end
+
+def recipes
+  user = User.find_by(id: session[:user_id])
+  if user
+    render json: user.recipes
+  else
+    render json: { error: "Not authorized" }, status: :unauthorized
   end
+end
 
 private
 

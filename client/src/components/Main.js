@@ -3,7 +3,7 @@ import Ingredients from "./Ingredients"
 import RecipeField from "./RecipeField"
 
 
-function Main({ ingredients, recipes, showRecipeClick, showList, setShowList, user}) {
+function Main({ ingredients, recipes, showRecipeClick, showList, setShowList, user, userRecipes}) {
 // const [showList, setShowList] = useState([])
 const [showAll, setShowAll] = useState([])
 
@@ -27,7 +27,7 @@ function handleIngredientClick(e) {
         <Ingredients ingredients={ingredients} handleIngredientClick={handleIngredientClick} handleShowAll={handleShowAll}/>
         <h3> Welcome to Baked! A curated selection of recipes tried, tested, and approved.
            Select an ingredient you have in your pantry and we'll show you what you can do with it!</h3>
-        <RecipeField user={user} recipes={recipes} showList={showList} showAll={showAll} showRecipeClick={showRecipeClick}/>
+        <RecipeField user={user} recipes={recipes} showList={showList} showAll={showAll} showRecipeClick={showRecipeClick} userRecipes={userRecipes}/>
     </div>
   )
 }

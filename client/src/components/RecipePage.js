@@ -1,5 +1,4 @@
 import React from 'react'
-import FavButton from './FavoriteButton'
 function RecipePage({ recipeDetail }) {
 
   return (

@@ -14,7 +14,7 @@ function Favorites(user, isLoggedIn) {
       const userRecipesData = await userRecipesResponse.json()
       setUserRecipes(userRecipesData)
     }
-  })
+  },[])
 
   return (
     <div>

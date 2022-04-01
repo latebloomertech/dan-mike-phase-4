@@ -15,7 +15,7 @@ class UserRecipesController < ApplicationController
     end
 
     def remove_by_recipe_id
-        user = User.find_by(params[:user_id])
+        user = User.find_by(id: session[:user_id])
         user_recipes = user.user_recipes
         existing_user_recipe = user_recipes.find_by(recipe_id: user_recipe_params[:recipe_id])
         existing_user_recipe.delete

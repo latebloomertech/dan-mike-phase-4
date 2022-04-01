@@ -20,22 +20,22 @@ function LoginForm({ onLogin }) {
 
   return (
     <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username</label>
-        <input
+        <label className="login-labels" htmlFor="username">Username:  </label>
+        <input className="input-form"
           type="text"
           id="username"
           autoComplete="off"
           value={username}
           onChange={(e) => setUsername(e.target.value)} />
 
-        <label htmlFor="password">Password</label>
-        <input
+        <label className="login-labels" htmlFor="password">Password: </label>
+        <input className="input-form"
           type="password"
           id="password"
           autoComplete="current-password"
           value={password}
           onChange={(e) => setPassword(e.target.value)} />
-          <button type="submit">Login</button>
+          <button className="button-test" type="submit">Login</button>
     </form>
   );
 }

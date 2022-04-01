@@ -25,8 +25,10 @@ function handleIngredientClick(e) {
     return (
     <div className="Main">
         <Ingredients ingredients={ingredients} handleIngredientClick={handleIngredientClick} handleShowAll={handleShowAll}/>
+        <div className='welcome-message'>
         <h3> Welcome to Baked! A curated selection of recipes tried, tested, and approved.
            Select an ingredient you have in your pantry and we'll show you what you can do with it!</h3>
+           </div>
         <RecipeField user={user} recipes={recipes} showList={showList} showAll={showAll} showRecipeClick={showRecipeClick} userRecipes={userRecipes}/>
     </div>
   )

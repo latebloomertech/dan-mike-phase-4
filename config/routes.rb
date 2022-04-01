@@ -11,12 +11,12 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   # get "/auth", to: "users#show"
-
+  get "/me/recipes", to: "users#recipes"
+  post "/user_recipes/remove_by_recipe_id", to: "user_recipes#remove_by_recipe_id"
 
 get '/detail', to: 'ingredients#detail'
 
-get '*path',
-to: 'fallback#index',
+get '*path', to: 'fallback#index',
 constraints: ->(req) { !req.xhr? && req.format.html? }
 
 end

@@ -90,7 +90,7 @@ display: flex;
 float: left;
 flex-direction: column;
 background-color: white;
-margin-left: 6em;
+margin: 1rem;
 padding: 1rem;
 box-shadow: 0 3px 7px -1px;
 line-height: 1.25;
